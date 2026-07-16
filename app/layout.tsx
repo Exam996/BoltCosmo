@@ -40,6 +40,10 @@ export const metadata: Metadata = {
   publisher: 'Elite Cosmo Clinic',
   alternates: { canonical: siteUrl },
   themeColor: '#0B3D91',
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+  },
   openGraph: {
     type: 'website',
     locale: 'en_IN',
@@ -68,12 +72,6 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true, 'max-image-preview': 'large' },
   },
   category: 'Medical Business',
-};
-
-export const viewport = {
-  themeColor: '#0B3D91',
-  width: 'device-width',
-  initialScale: 1,
 };
 
 const medicalBusinessSchema = {
