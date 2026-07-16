@@ -1,5 +1,5 @@
 import './globals.css';
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter, Poppins } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
 import { ScrollProgress } from '@/components/scroll-progress';
@@ -39,11 +39,6 @@ export const metadata: Metadata = {
   creator: 'Elite Cosmo Clinic',
   publisher: 'Elite Cosmo Clinic',
   alternates: { canonical: siteUrl },
-  themeColor: '#0B3D91',
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-  },
   openGraph: {
     type: 'website',
     locale: 'en_IN',
@@ -72,6 +67,12 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true, 'max-image-preview': 'large' },
   },
   category: 'Medical Business',
+};
+
+export const viewport: Viewport = {
+  themeColor: '#0B3D91',
+  width: 'device-width',
+  initialScale: 1,
 };
 
 const medicalBusinessSchema = {
