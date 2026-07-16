@@ -145,9 +145,7 @@ function getAnswer(input: string, history: Msg[]): string {
 export function FloatingActions() {
   const [chatOpen, setChatOpen] = useState(false);
   const [input, setInput] = useState('');
-  const [messages, setMessages] = useState<Msg[]>([
-    { role: 'bot', text: GREETING, ts: Date.now() },
-  ]);
+  const [messages, setMessages] = useState<Msg[]>([]);
   const [typing, setTyping] = useState(false);
   const [mounted, setMounted] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -165,6 +163,8 @@ export function FloatingActions() {
         }
       }
     } catch {}
+    // Default greeting if no history exists
+    setMessages([{ role: 'bot', text: GREETING, ts: Date.now() }]);
   }, []);
 
   // Persist conversation to localStorage
