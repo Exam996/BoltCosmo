@@ -52,9 +52,9 @@ export function About() {
               key={p.title}
               variants={fadeUpItem}
               whileHover={{ y: -6 }}
-              className="group glass-card rounded-2xl p-6 transition-shadow hover:shadow-luxe"
+              className="group bg-card border border-border/50 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-luxe"
             >
-              <span className="grid h-12 w-12 place-items-center rounded-xl bg-gradient-to-br from-primary/10 to-secondary/10 text-primary group-hover:from-primary group-hover:to-secondary group-hover:text-white transition-all">
+              <span className="grid h-12 w-12 place-items-center rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
                 <p.icon className="h-6 w-6" />
               </span>
               <h3 className="mt-4 text-lg font-semibold">{p.title}</h3>
@@ -64,17 +64,17 @@ export function About() {
         </motion.div>
 
         <Reveal delay={0.1} className="mt-16">
-          <div className="relative grid lg:grid-cols-5 gap-8 items-center glass-card rounded-[2rem] p-6 sm:p-10 overflow-hidden">
-            <div className="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-accent/10 blur-3xl" />
+          <div className="relative grid lg:grid-cols-5 gap-8 items-center bg-card border border-border/50 rounded-[2rem] p-6 sm:p-10 shadow-[0_8px_30px_rgb(15,118,110,0.02)] overflow-hidden">
+            <div className="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-accent/5 blur-3xl" />
             <div className="lg:col-span-2 relative">
-              <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-luxe">
+              <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-luxe border border-border/40">
                 <img
                   src="https://images.pexels.com/photos/5214958/pexels-photo-5214958.jpeg?auto=compress&cs=tinysrgb&w=800"
                   alt={`${clinic.doctor} — Hair Transplant Specialist`}
                   className="h-full w-full object-cover"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/15 to-transparent" />
               </div>
               <motion.div
                 animate={{ y: [0, -8, 0] }}
@@ -82,7 +82,7 @@ export function About() {
                 className="absolute -bottom-4 -right-4 glass-card rounded-2xl px-4 py-3 shadow-luxe"
               >
                 <div className="flex items-center gap-2">
-                  <BadgeCheck className="h-5 w-5 text-secondary" />
+                  <BadgeCheck className="h-5 w-5 text-primary" />
                   <span className="text-sm font-semibold">1000+ Patients</span>
                 </div>
               </motion.div>
@@ -109,7 +109,7 @@ export function About() {
               <ul className="mt-6 grid sm:grid-cols-2 gap-3">
                 {credentials.map((c) => (
                   <li key={c} className="flex items-start gap-2.5 text-sm">
-                    <GraduationCap className="mt-0.5 h-4.5 w-4.5 shrink-0 text-secondary" />
+                    <GraduationCap className="mt-0.5 h-4.5 w-4.5 shrink-0 text-primary" />
                     <span className="text-foreground/80">{c}</span>
                   </li>
                 ))}
@@ -118,7 +118,7 @@ export function About() {
               <div className="mt-7 flex flex-wrap gap-3">
                 <a
                   href="#appointment"
-                  className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary to-secondary px-5 py-2.5 text-sm font-semibold text-white shadow-luxe"
+                  className="inline-flex items-center gap-2 rounded-2xl bg-primary hover:bg-secondary px-5 py-2.5 text-sm font-semibold text-white shadow-luxe transition-all duration-300"
                 >
                   Schedule a Consultation
                 </a>
@@ -126,7 +126,7 @@ export function About() {
                   href={`https://wa.me/${clinic.whatsapp}?text=${encodeURIComponent(clinic.whatsappMessage)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full glass px-5 py-2.5 text-sm font-semibold"
+                  className="inline-flex items-center gap-2 rounded-2xl border border-primary bg-card text-primary hover:bg-primary/5 px-5 py-2.5 text-sm font-semibold transition-all duration-300"
                 >
                   Chat on WhatsApp
                 </a>

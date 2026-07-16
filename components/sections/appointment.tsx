@@ -102,7 +102,7 @@ export function Appointment() {
 
   return (
     <section id="appointment" className="relative py-24 sm:py-32 overflow-hidden">
-      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-primary/[0.06] via-background to-secondary/[0.05]" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[#FAFAF8] to-[#F7F8F6]" />
       <div className="absolute -top-20 right-0 -z-10 h-72 w-72 rounded-full bg-accent/10 blur-3xl" />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -112,7 +112,7 @@ export function Appointment() {
               Book Appointment
             </span>
             <h2 className="mt-4 font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight">
-              Begin Your <span className="text-gradient-primary">Transformation</span>
+              Begin Your Transformation
             </h2>
             <p className="mt-5 text-muted-foreground text-base sm:text-lg">
               Share a few details and our team will call you to confirm your
@@ -123,8 +123,8 @@ export function Appointment() {
               {contactItems.map((c) => {
                 const Icon = c.icon;
                 const content = (
-                  <div className="glass-card rounded-2xl p-4 h-full hover:shadow-luxe transition-shadow">
-                    <span className="grid h-10 w-10 place-items-center rounded-xl bg-primary/10 text-primary">
+                  <div className="bg-white border border-slate-100 rounded-3xl p-4 h-full shadow-sm hover:shadow-md transition-all duration-300">
+                    <span className="grid h-10 w-10 place-items-center rounded-2xl bg-slate-50 text-primary">
                       <Icon className="h-5 w-5" />
                     </span>
                     <p className="mt-3 text-xs text-muted-foreground">{c.label}</p>
@@ -143,7 +143,7 @@ export function Appointment() {
           </Reveal>
 
           <Reveal delay={0.1} className="lg:col-span-7">
-            <div className="relative glass-card rounded-[2rem] p-6 sm:p-10 shadow-luxe">
+            <div className="relative bg-white border border-slate-100 rounded-[2rem] p-6 sm:p-10 shadow-sm">
               <AnimatePresence mode="wait">
                 {status === 'success' ? null : (
                   <motion.form
@@ -244,7 +244,7 @@ export function Appointment() {
                       <Button
                         type="submit"
                         disabled={status === 'loading'}
-                        className="w-full bg-gradient-to-r from-primary to-secondary text-white shadow-luxe h-12 text-base"
+                        className="w-full bg-primary hover:bg-secondary text-white shadow-luxe h-12 text-base rounded-2xl transition-all duration-300"
                       >
                         {status === 'loading' ? (
                           <>
@@ -273,7 +273,7 @@ export function Appointment() {
       {/* Confirmation Modal */}
       <Dialog open={status === 'success'} onOpenChange={(o) => !o && closeModal()}>
         <DialogContent className="max-w-md overflow-hidden p-0">
-          <div className="relative bg-gradient-to-br from-primary to-secondary p-8 text-center text-white">
+          <div className="relative bg-primary p-8 text-center text-white">
             <button
               type="button"
               aria-label="Close"

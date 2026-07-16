@@ -27,8 +27,8 @@ export function MapSection() {
 
         <Reveal delay={0.1} className="mt-12">
           <div className="grid lg:grid-cols-12 gap-6 items-stretch">
-            <div className="lg:col-span-4 glass-card rounded-[2rem] p-8 flex flex-col justify-center">
-              <span className="grid h-12 w-12 place-items-center rounded-xl bg-gradient-to-br from-primary to-secondary text-white shadow-luxe">
+            <div className="lg:col-span-4 bg-card border border-border/50 rounded-[2rem] p-8 shadow-[0_8px_30px_rgb(15,118,110,0.02)] flex flex-col justify-center">
+              <span className="grid h-12 w-12 place-items-center rounded-2xl bg-primary text-white shadow-luxe">
                 <MapPin className="h-6 w-6" />
               </span>
               <h3 className="mt-5 font-display text-xl font-bold">{clinic.name}</h3>
@@ -53,7 +53,7 @@ export function MapSection() {
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-primary to-secondary px-5 py-2.5 text-sm font-semibold text-white shadow-luxe"
+                className="mt-6 inline-flex items-center justify-center gap-2 rounded-2xl bg-primary hover:bg-secondary px-5 py-2.5 text-sm font-semibold text-white shadow-luxe transition-all duration-300"
               >
                 <Navigation className="h-4 w-4" />
                 Get Directions

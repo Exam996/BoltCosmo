@@ -37,15 +37,15 @@ export function Hero() {
       className="relative min-h-screen flex items-center overflow-hidden pt-28 pb-16"
     >
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.07] via-background to-secondary/[0.06]" />
-        <div className="absolute inset-0 bg-grid opacity-[0.35] [mask-image:radial-gradient(ellipse_at_center,black,transparent_75%)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#FAFAF8] via-[#F7F8F6] to-[#F1F5F4]" />
+        <div className="absolute inset-0 bg-grid opacity-[0.25] [mask-image:radial-gradient(ellipse_at_center,black,transparent_75%)]" />
         <motion.div
-          className="absolute -top-32 -left-32 h-96 w-96 rounded-full bg-primary/20 blur-3xl"
+          className="absolute -top-32 -left-32 h-96 w-96 rounded-full bg-primary/10 blur-3xl"
           animate={{ scale: [1, 1.15, 1], opacity: [0.4, 0.6, 0.4] }}
           transition={{ duration: 10, repeat: Infinity }}
         />
         <motion.div
-          className="absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-secondary/20 blur-3xl"
+          className="absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-[#134E4A]/10 blur-3xl"
           animate={{ scale: [1, 1.2, 1], opacity: [0.4, 0.6, 0.4] }}
           transition={{ duration: 12, repeat: Infinity, delay: 1 }}
         />
@@ -91,7 +91,7 @@ export function Hero() {
           >
             <Link
               href="#appointment"
-              className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary to-secondary px-6 py-3.5 text-sm font-semibold text-white shadow-luxe transition-transform hover:scale-[1.03]"
+              className="group inline-flex items-center gap-2 rounded-2xl bg-primary px-6 py-3.5 text-sm font-semibold text-white shadow-luxe transition-all duration-300 hover:bg-secondary hover:scale-[1.02]"
             >
               <CalendarCheck className="h-4.5 w-4.5" />
               Book Appointment
@@ -102,7 +102,7 @@ export function Hero() {
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-2 rounded-full glass px-6 py-3.5 text-sm font-semibold text-foreground shadow-sm transition-transform hover:scale-[1.03]"
+              className="group inline-flex items-center gap-2 rounded-2xl border border-primary bg-card px-6 py-3.5 text-sm font-semibold text-primary shadow-sm transition-all duration-300 hover:bg-primary/5 hover:scale-[1.02]"
             >
               <MessageCircle className="h-4.5 w-4.5 text-[#25D366]" />
               WhatsApp
@@ -121,7 +121,7 @@ export function Hero() {
               ))}
             </div>
             <span>Rated 5.0 by 1000+ patients</span>
-            <ShieldCheck className="h-4 w-4 text-secondary" />
+            <ShieldCheck className="h-4 w-4 text-primary" />
           </motion.div>
         </div>
 
@@ -132,14 +132,14 @@ export function Hero() {
           className="lg:col-span-5"
         >
           <div className="relative">
-            <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden shadow-luxe">
+            <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden shadow-luxe border border-border/40">
               <img
                 src="https://images.pexels.com/photos/7088512/pexels-photo-7088512.jpeg?auto=compress&cs=tinysrgb&w=900"
                 alt="Elite Cosmo Clinic dermatology treatment room"
                 className="h-full w-full object-cover"
                 loading="eager"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/40 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent" />
             </div>
 
             <motion.div
@@ -148,7 +148,7 @@ export function Hero() {
               className="absolute -left-4 sm:-left-8 top-10 glass-card rounded-2xl p-4 w-44 shadow-luxe"
             >
               <div className="flex items-center gap-3">
-                <span className="grid h-10 w-10 place-items-center rounded-xl bg-secondary/15 text-secondary">
+                <span className="grid h-10 w-10 place-items-center rounded-xl bg-secondary/15 text-primary">
                   <ShieldCheck className="h-5 w-5" />
                 </span>
                 <div>
@@ -181,12 +181,12 @@ export function Hero() {
           {stats.map((s) => (
             <div
               key={s.label}
-              className="glass-card rounded-2xl p-5 text-center"
+              className="bg-card border border-border/50 rounded-2xl p-5 text-center shadow-[0_8px_30px_rgb(15,118,110,0.02)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgb(15,118,110,0.06)]"
             >
-              <div className="font-display text-3xl sm:text-4xl font-bold text-gradient-primary">
+              <div className="font-display text-3xl sm:text-4xl font-bold text-primary">
                 <Counter value={s.value} suffix={s.suffix} />
               </div>
-              <p className="mt-1 text-xs sm:text-sm text-muted-foreground">
+              <p className="mt-1 text-xs sm:text-sm text-foreground/80 font-medium">
                 {s.label}
               </p>
             </div>

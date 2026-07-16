@@ -12,7 +12,7 @@ export function Treatments() {
       <div className="absolute inset-0 -z-10 bg-grid opacity-20 [mask-image:radial-gradient(ellipse_at_center,black,transparent_70%)]" />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal className="text-center max-w-2xl mx-auto">
-          <span className="inline-flex items-center gap-2 rounded-full bg-secondary/15 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-secondary">
+          <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-primary">
             Our Treatments
           </span>
           <h2 className="mt-4 font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight">
@@ -36,10 +36,10 @@ export function Treatments() {
               key={t.title}
               variants={fadeUpItem}
               whileHover={{ y: -8 }}
-              className="group relative glass-card rounded-2xl p-6 overflow-hidden transition-shadow hover:shadow-luxe"
+              className="group relative bg-card border border-border/50 rounded-2xl p-6 overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-luxe"
             >
-              <div className="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-gradient-to-br from-primary/10 to-secondary/10 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
-              <span className="relative grid h-14 w-14 place-items-center rounded-2xl bg-gradient-to-br from-primary to-secondary text-white shadow-luxe transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+              <div className="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-primary/5 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+              <span className="relative grid h-14 w-14 place-items-center rounded-2xl bg-primary text-white shadow-luxe transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
                 <t.icon className="h-7 w-7" />
               </span>
               <h3 className="mt-5 text-lg font-semibold">{t.title}</h3>
@@ -53,7 +53,7 @@ export function Treatments() {
                 Learn More
                 <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Link>
-              <span className="pointer-events-none absolute bottom-0 left-0 right-0 h-1 origin-left scale-x-0 rounded-b-2xl bg-gradient-to-r from-primary to-secondary transition-transform duration-500 group-hover:scale-x-100" />
+              <span className="pointer-events-none absolute bottom-0 left-0 right-0 h-1 origin-left scale-x-0 rounded-b-2xl bg-primary transition-transform duration-500 group-hover:scale-x-100" />
             </motion.article>
           ))}
         </motion.div>
@@ -61,7 +61,7 @@ export function Treatments() {
         <Reveal delay={0.2} className="mt-12 text-center">
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 rounded-full glass px-6 py-3 text-sm font-semibold hover:text-primary transition-colors"
+            className="inline-flex items-center gap-2 rounded-2xl border border-primary bg-card text-primary hover:bg-primary/5 px-6 py-3 text-sm font-semibold transition-all duration-300"
           >
             Read our blog
             <ArrowUpRight className="h-4 w-4" />

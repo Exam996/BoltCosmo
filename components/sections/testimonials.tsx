@@ -26,7 +26,7 @@ export function Testimonials() {
 
   return (
     <section id="testimonials" className="relative py-24 sm:py-32 overflow-hidden">
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background via-secondary/[0.05] to-background" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[#FAFAF8] via-[#F1F5F4] to-[#FAFAF8]" />
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <Reveal className="text-center max-w-2xl mx-auto">
           <span className="inline-flex items-center gap-2 rounded-full bg-accent/15 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-accent">
@@ -42,7 +42,7 @@ export function Testimonials() {
         </Reveal>
 
         <Reveal delay={0.1} className="mt-14">
-          <div className="relative glass-card rounded-[2rem] p-8 sm:p-12 overflow-hidden">
+          <div className="relative bg-card border border-border/50 rounded-[2rem] p-8 sm:p-12 shadow-[0_8px_30px_rgb(15,118,110,0.02)] overflow-hidden">
             <Quote className="absolute -top-4 left-8 h-24 w-24 text-primary/5" />
 
             <AnimatePresence mode="wait" custom={direction}>
@@ -64,7 +64,7 @@ export function Testimonials() {
                   &ldquo;{t.review}&rdquo;
                 </p>
                 <div className="mt-6 flex items-center gap-4">
-                  <span className="grid h-12 w-12 place-items-center rounded-full bg-gradient-to-br from-primary to-secondary text-white font-semibold">
+                  <span className="grid h-12 w-12 place-items-center rounded-full bg-primary text-white font-semibold shadow-sm">
                     {t.initials}
                   </span>
                   <div>
@@ -87,9 +87,9 @@ export function Testimonials() {
                       setIndex(i);
                     }}
                     className={cn(
-                      'h-2 rounded-full transition-all',
+                      'h-2 rounded-full transition-all duration-300',
                       i === index
-                        ? 'w-8 bg-gradient-to-r from-primary to-secondary'
+                        ? 'w-8 bg-primary shadow-sm'
                         : 'w-2 bg-foreground/20 hover:bg-foreground/40'
                     )}
                   />
@@ -100,7 +100,7 @@ export function Testimonials() {
                   type="button"
                   aria-label="Previous review"
                   onClick={() => go(-1)}
-                  className="grid h-10 w-10 place-items-center rounded-full glass hover:text-primary transition-colors"
+                  className="grid h-10 w-10 place-items-center rounded-full border border-primary bg-card text-primary hover:bg-primary/5 transition-colors duration-300"
                 >
                   <ChevronLeft className="h-5 w-5" />
                 </button>
@@ -108,7 +108,7 @@ export function Testimonials() {
                   type="button"
                   aria-label="Next review"
                   onClick={() => go(1)}
-                  className="grid h-10 w-10 place-items-center rounded-full glass hover:text-primary transition-colors"
+                  className="grid h-10 w-10 place-items-center rounded-full border border-primary bg-card text-primary hover:bg-primary/5 transition-colors duration-300"
                 >
                   <ChevronRight className="h-5 w-5" />
                 </button>

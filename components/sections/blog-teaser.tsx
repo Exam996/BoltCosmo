@@ -11,7 +11,7 @@ export function BlogTeaser() {
 
   return (
     <section className="relative py-24 sm:py-32 overflow-hidden">
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background via-primary/[0.04] to-background" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[#FAFAF8] via-[#F1F5F4] to-[#FAFAF8]" />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal className="text-center max-w-2xl mx-auto">
           <span className="inline-flex items-center gap-2 rounded-full bg-accent/15 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-accent">
@@ -38,7 +38,7 @@ export function BlogTeaser() {
             <motion.div key={post.slug} variants={fadeUpItem}>
               <Link
                 href={`/blog/${post.slug}`}
-                className="group flex flex-col glass-card rounded-2xl overflow-hidden h-full hover:shadow-luxe transition-shadow"
+                className="group flex flex-col bg-card border border-border/50 rounded-2xl overflow-hidden h-full shadow-sm hover:shadow-luxe transition-all duration-300"
               >
                 <div className="relative aspect-[16/10] overflow-hidden">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -86,7 +86,7 @@ export function BlogTeaser() {
         <Reveal delay={0.15} className="mt-10 text-center">
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary to-secondary px-6 py-3 text-sm font-semibold text-white shadow-luxe"
+            className="inline-flex items-center gap-2 rounded-2xl bg-primary hover:bg-secondary px-6 py-3 text-sm font-semibold text-white shadow-luxe transition-all duration-300"
           >
             View All Articles
             <ArrowUpRight className="h-4 w-4" />

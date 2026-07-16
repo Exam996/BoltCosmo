@@ -214,7 +214,7 @@ export function FloatingActions() {
               style={{ maxHeight: '70vh' }}
             >
               {/* Header */}
-              <div className="flex items-center gap-3 p-4 bg-gradient-to-r from-primary to-secondary text-white">
+              <div className="flex items-center gap-3 p-4 bg-primary text-white">
                 <span className="relative grid h-10 w-10 place-items-center rounded-full bg-white/15">
                   <Bot className="h-5 w-5" />
                   <span className="absolute -bottom-0.5 -right-0.5 h-3 w-3 rounded-full bg-green-400 ring-2 ring-primary" />
@@ -262,7 +262,7 @@ export function FloatingActions() {
                       className={cn(
                         'max-w-[85%] rounded-2xl px-3.5 py-2.5 text-sm',
                         m.role === 'user'
-                          ? 'bg-gradient-to-r from-primary to-secondary text-white rounded-br-sm'
+                          ? 'bg-primary text-white rounded-br-sm'
                           : 'glass-card rounded-bl-sm'
                       )}
                     >
@@ -319,7 +319,7 @@ export function FloatingActions() {
                 <button
                   type="submit"
                   aria-label="Send"
-                  className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-gradient-to-r from-primary to-secondary text-white shadow-luxe"
+                  className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-primary hover:bg-secondary text-white shadow-luxe transition-all duration-300"
                 >
                   <Send className="h-5 w-5" />
                 </button>
@@ -333,7 +333,7 @@ export function FloatingActions() {
           type="button"
           aria-label="Open Elite AI Assistant"
           onClick={() => setChatOpen((o) => !o)}
-          className="relative grid h-14 w-14 place-items-center rounded-full bg-gradient-to-br from-primary to-secondary text-white shadow-luxe transition-transform hover:scale-110"
+          className="relative grid h-14 w-14 place-items-center rounded-full bg-primary hover:bg-secondary text-white shadow-luxe transition-all duration-300 hover:scale-110"
         >
           {!chatOpen && (
             <span className="absolute inset-0 rounded-full bg-secondary/40 animate-pulse-ring" />

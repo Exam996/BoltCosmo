@@ -34,7 +34,7 @@ export function Footer() {
         <div className="grid gap-10 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <Link href="#home" className="flex items-center gap-2.5">
-              <span className="relative grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-primary to-secondary text-white">
+              <span className="relative grid h-10 w-10 place-items-center rounded-2xl bg-primary text-white">
                 <Sparkles className="h-5 w-5" />
               </span>
               <span className="flex flex-col leading-none">
@@ -65,7 +65,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={s.label}
-                  className="grid h-10 w-10 place-items-center rounded-xl bg-background/10 hover:bg-gradient-to-br hover:from-primary hover:to-secondary text-background/80 hover:text-white transition-all"
+                  className="grid h-10 w-10 place-items-center rounded-2xl bg-background/10 hover:bg-primary text-background/80 hover:text-white transition-all duration-300"
                 >
                   <s.icon className="h-5 w-5" />
                 </a>

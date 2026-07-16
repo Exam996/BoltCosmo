@@ -35,7 +35,7 @@ export function StickyCta() {
           <div className="mx-auto max-w-3xl pointer-events-auto">
             <div className="glass-card rounded-2xl shadow-luxe px-4 sm:px-5 py-3 flex items-center justify-between gap-3">
               <div className="flex items-center gap-3 min-w-0">
-                <span className="hidden sm:grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-primary to-secondary text-white shrink-0">
+                <span className="hidden sm:grid h-10 w-10 place-items-center rounded-2xl bg-primary text-white shrink-0">
                   <Sparkles className="h-5 w-5" />
                 </span>
                 <div className="min-w-0">
@@ -57,7 +57,7 @@ export function StickyCta() {
                 </a>
                 <Link
                   href="/#appointment"
-                  className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-primary to-secondary px-4 sm:px-5 py-2.5 text-sm font-semibold text-white shadow-luxe"
+                  className="inline-flex items-center gap-2 rounded-2xl bg-primary hover:bg-secondary px-4 sm:px-5 py-2.5 text-sm font-semibold text-white shadow-luxe transition-all duration-300"
                 >
                   <CalendarCheck className="h-4 w-4" />
                   <span className="hidden sm:inline">Book Appointment</span>

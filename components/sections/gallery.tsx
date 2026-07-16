@@ -118,10 +118,10 @@ export function Gallery() {
               type="button"
               onClick={() => setFilter(f)}
               className={cn(
-                'rounded-full px-5 py-2 text-sm font-medium transition-all',
+                'rounded-2xl px-5 py-2 text-sm font-medium transition-all duration-300',
                 filter === f
-                  ? 'bg-gradient-to-r from-primary to-secondary text-white shadow-luxe'
-                  : 'glass text-foreground/80 hover:text-primary'
+                  ? 'bg-primary text-white shadow-luxe hover:bg-secondary'
+                  : 'border border-primary bg-card text-primary hover:bg-primary/5'
               )}
             >
               {f}

@@ -7,7 +7,7 @@ import { whyChooseUs } from '@/lib/data';
 export function WhyChooseUs() {
   return (
     <section className="relative py-24 sm:py-32 overflow-hidden">
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background via-primary/[0.04] to-background" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[#FAFAF8] via-[#F1F5F4] to-[#FAFAF8]" />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal className="text-center max-w-2xl mx-auto">
           <span className="inline-flex items-center gap-2 rounded-full bg-accent/15 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-accent">
@@ -33,13 +33,13 @@ export function WhyChooseUs() {
             <motion.div
               key={f.title}
               variants={fadeUpItem}
-              whileHover={{ y: -6, rotate: -0.5 }}
-              className="group relative glass-card rounded-2xl p-6 transition-shadow hover:shadow-luxe-teal"
+              whileHover={{ y: -6 }}
+              className="group relative bg-card border border-border/50 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-luxe"
             >
-              <span className="absolute right-5 top-5 font-display text-4xl font-bold text-foreground/5 group-hover:text-secondary/15 transition-colors">
+              <span className="absolute right-5 top-5 font-display text-4xl font-bold text-foreground/5 group-hover:text-primary/10 transition-colors">
                 {String(i + 1).padStart(2, '0')}
               </span>
-              <span className="grid h-12 w-12 place-items-center rounded-xl bg-secondary/10 text-secondary group-hover:bg-secondary group-hover:text-white transition-all">
+              <span className="grid h-12 w-12 place-items-center rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
                 <f.icon className="h-6 w-6" />
               </span>
               <h3 className="mt-4 text-base font-semibold">{f.title}</h3>

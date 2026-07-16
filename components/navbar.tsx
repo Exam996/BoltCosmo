@@ -96,7 +96,7 @@ export function Navbar() {
 
           <Button
             asChild
-            className="hidden sm:inline-flex bg-gradient-to-r from-primary to-secondary text-white shadow-luxe hover:opacity-90"
+            className="hidden sm:inline-flex bg-primary hover:bg-secondary text-white shadow-luxe transition-all duration-300 rounded-2xl"
           >
             <Link href="#appointment">Book Appointment</Link>
           </Button>
@@ -162,7 +162,7 @@ export function Navbar() {
               </ul>
               <Button
                 asChild
-                className="mt-auto bg-gradient-to-r from-primary to-secondary text-white"
+                className="mt-auto bg-primary hover:bg-secondary text-white rounded-2xl transition-all duration-300"
               >
                 <Link href="#appointment" onClick={() => setOpen(false)}>
                   Book Appointment
